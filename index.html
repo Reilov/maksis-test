@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список задач</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Список задач</h1>
+        <div class="filters">
+            <input
+                type="text"
+                id="search"
+                placeholder="Поиск по названию..."
+            >
+            <select id="status">
+                <option value="all">Все</option>
+                <option value="completed">Выполненные</option>
+                <option value="notCompleted">Не выполненные</option>
+            </select>
+        <p id="count">Найдено задач: 0</p>
+        </div>
+
+        <p id="loading" class="message">Загрузка...</p>
+        <p id="error" class="message hidden">Ошибка загрузки данных.</p>
+        <p id="empty" class="message hidden">Ничего не найдено.</p>
+        <div id="tasks" class="tasks"></div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal" class="close">x</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
